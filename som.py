@@ -1,5 +1,6 @@
 
 def SOM(freqBand,nIterations,gamma,sigma=1,nNodes=10,plot=False):
+    '''Implemenation of Kohonen Self-Organizing Maps algorithm for use on sequence data'''
     
     # I make the data 2-d, adding the position as an explicit column
     X = np.hstack((np.arange(freqBand.shape[1]).reshape(-1,1),freqBand.T))
